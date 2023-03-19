@@ -30,15 +30,15 @@
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.mnuFile = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuFile_Reset = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuFile_Exit = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuProducts = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuProducts_PrintBooks = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuProducts_AudioBooks = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuHelp = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuHelp_About = new System.Windows.Forms.ToolStripMenuItem();
             this.grpProductSelected = new System.Windows.Forms.GroupBox();
             this.lstProducts = new System.Windows.Forms.ListBox();
-            this.mnuFile_Reset = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnuProducts_PrintBooks = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnuProducts_AudioBooks = new System.Windows.Forms.ToolStripMenuItem();
             this.lblSubtotal = new System.Windows.Forms.Label();
             this.txtSubtotal = new System.Windows.Forms.TextBox();
             this.lblTax = new System.Windows.Forms.Label();
@@ -73,11 +73,19 @@
             this.mnuFile.Size = new System.Drawing.Size(37, 20);
             this.mnuFile.Text = "File";
             // 
+            // mnuFile_Reset
+            // 
+            this.mnuFile_Reset.Name = "mnuFile_Reset";
+            this.mnuFile_Reset.Size = new System.Drawing.Size(180, 22);
+            this.mnuFile_Reset.Text = "R&eset";
+            this.mnuFile_Reset.Click += new System.EventHandler(this.mnuFile_Reset_Click);
+            // 
             // mnuFile_Exit
             // 
             this.mnuFile_Exit.Name = "mnuFile_Exit";
-            this.mnuFile_Exit.Size = new System.Drawing.Size(102, 22);
+            this.mnuFile_Exit.Size = new System.Drawing.Size(180, 22);
             this.mnuFile_Exit.Text = "E&xit";
+            this.mnuFile_Exit.Click += new System.EventHandler(this.mnuFile_Exit_Click);
             // 
             // mnuProducts
             // 
@@ -87,6 +95,20 @@
             this.mnuProducts.Name = "mnuProducts";
             this.mnuProducts.Size = new System.Drawing.Size(66, 20);
             this.mnuProducts.Text = "Products";
+            // 
+            // mnuProducts_PrintBooks
+            // 
+            this.mnuProducts_PrintBooks.Name = "mnuProducts_PrintBooks";
+            this.mnuProducts_PrintBooks.Size = new System.Drawing.Size(141, 22);
+            this.mnuProducts_PrintBooks.Text = "P&rint Books";
+            this.mnuProducts_PrintBooks.Click += new System.EventHandler(this.mnuProducts_PrintBooks_Click);
+            // 
+            // mnuProducts_AudioBooks
+            // 
+            this.mnuProducts_AudioBooks.Name = "mnuProducts_AudioBooks";
+            this.mnuProducts_AudioBooks.Size = new System.Drawing.Size(141, 22);
+            this.mnuProducts_AudioBooks.Text = "A&udio Books";
+            this.mnuProducts_AudioBooks.Click += new System.EventHandler(this.mnuProducts_AudioBooks_Click);
             // 
             // mnuHelp
             // 
@@ -99,8 +121,9 @@
             // mnuHelp_About
             // 
             this.mnuHelp_About.Name = "mnuHelp_About";
-            this.mnuHelp_About.Size = new System.Drawing.Size(180, 22);
+            this.mnuHelp_About.Size = new System.Drawing.Size(107, 22);
             this.mnuHelp_About.Text = "&About";
+            this.mnuHelp_About.Click += new System.EventHandler(this.mnuHelp_About_Click);
             // 
             // grpProductSelected
             // 
@@ -120,24 +143,6 @@
             this.lstProducts.Name = "lstProducts";
             this.lstProducts.Size = new System.Drawing.Size(233, 124);
             this.lstProducts.TabIndex = 0;
-            // 
-            // mnuFile_Reset
-            // 
-            this.mnuFile_Reset.Name = "mnuFile_Reset";
-            this.mnuFile_Reset.Size = new System.Drawing.Size(102, 22);
-            this.mnuFile_Reset.Text = "R&eset";
-            // 
-            // mnuProducts_PrintBooks
-            // 
-            this.mnuProducts_PrintBooks.Name = "mnuProducts_PrintBooks";
-            this.mnuProducts_PrintBooks.Size = new System.Drawing.Size(180, 22);
-            this.mnuProducts_PrintBooks.Text = "P&rint Books";
-            // 
-            // mnuProducts_AudioBooks
-            // 
-            this.mnuProducts_AudioBooks.Name = "mnuProducts_AudioBooks";
-            this.mnuProducts_AudioBooks.Size = new System.Drawing.Size(180, 22);
-            this.mnuProducts_AudioBooks.Text = "A&udio Books";
             // 
             // lblSubtotal
             // 
