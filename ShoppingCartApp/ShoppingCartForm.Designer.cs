@@ -250,7 +250,6 @@
             this.Name = "ShoppingCartForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Shopping Cart";
-            this.Load += new System.EventHandler(this.ShoppingCartForm_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.grpProductSelected.ResumeLayout(false);

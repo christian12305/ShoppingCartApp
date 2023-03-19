@@ -7,11 +7,6 @@ namespace ShoppingCartApp
             InitializeComponent();
         }
 
-        private void ShoppingCartForm_Load(object sender, EventArgs e)
-        {
-
-        }
-
         //Button event handler for removing an item.
         private void btnRemove_Click(object sender, EventArgs e)
         {
