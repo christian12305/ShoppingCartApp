@@ -17,6 +17,7 @@ namespace ShoppingCartApp
             InitializeComponent();
         }
 
+        //Adds the corresponding list to the form load event handler
         private void lstAudioBooks_SelectedIndexChanged(object sender, EventArgs e)
         {
             lstAudioBooks.Items.Add(@"Developing People Skills - $12.95");
@@ -27,9 +28,10 @@ namespace ShoppingCartApp
 
         private void btnAddCart_Click(object sender, EventArgs e)
         {
-            
-        }
 
+        }  
+        
+        //Event handler for the close button
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();

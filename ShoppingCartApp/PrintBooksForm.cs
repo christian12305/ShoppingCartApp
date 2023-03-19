@@ -22,6 +22,7 @@ namespace ShoppingCartApp
             
         }
 
+        //Adds the corresponding list to the form load event handler
         private void PrintBooksForm_Load(object sender, EventArgs e)
         {
             lstPrintBooks.Items.Add(@"C# Programming Made Easy - $11.95");
@@ -30,6 +31,7 @@ namespace ShoppingCartApp
             lstPrintBooks.Items.Add(@"The History of Computers - $14.50");
         }
 
+        //Event handler for the close button
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
