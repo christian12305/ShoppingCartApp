@@ -53,6 +53,7 @@
             this.lstAudioBooks.Name = "lstAudioBooks";
             this.lstAudioBooks.Size = new System.Drawing.Size(292, 109);
             this.lstAudioBooks.TabIndex = 0;
+            this.lstAudioBooks.SelectedIndexChanged += new System.EventHandler(this.lstAudioBooks_SelectedIndexChanged);
             // 
             // btnAddCart
             // 
@@ -62,6 +63,7 @@
             this.btnAddCart.TabIndex = 1;
             this.btnAddCart.Text = "&Add to Cart";
             this.btnAddCart.UseVisualStyleBackColor = true;
+            this.btnAddCart.Click += new System.EventHandler(this.btnAddCart_Click);
             // 
             // btnClose
             // 
@@ -71,6 +73,7 @@
             this.btnClose.TabIndex = 2;
             this.btnClose.Text = "&Close";
             this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // AudioBooksForm
             // 

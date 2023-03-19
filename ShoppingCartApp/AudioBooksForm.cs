@@ -16,5 +16,23 @@ namespace ShoppingCartApp
         {
             InitializeComponent();
         }
+
+        private void lstAudioBooks_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            lstAudioBooks.Items.Add(@"Developing People Skills - $12.95");
+            lstAudioBooks.Items.Add(@"Indiscrete Math - $19.95");
+            lstAudioBooks.Items.Add(@"Relaxation Techniques - $11.50");
+            lstAudioBooks.Items.Add(@"You can Program Too! - $25.50");
+        }
+
+        private void btnAddCart_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

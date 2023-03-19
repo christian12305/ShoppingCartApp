@@ -72,6 +72,7 @@
             this.btnClose.TabIndex = 2;
             this.btnClose.Text = "&Close";
             this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // PrintBooksForm
             // 
@@ -84,6 +85,7 @@
             this.Name = "PrintBooksForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Print Books";
+            this.Load += new System.EventHandler(this.PrintBooksForm_Load);
             this.grpPrintBooks.ResumeLayout(false);
             this.ResumeLayout(false);
 
