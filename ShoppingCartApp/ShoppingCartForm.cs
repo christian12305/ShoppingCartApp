@@ -11,5 +11,10 @@ namespace ShoppingCartApp
         {
 
         }
+
+        private void btnRemove_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
