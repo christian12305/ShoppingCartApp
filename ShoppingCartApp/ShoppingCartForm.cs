@@ -1,3 +1,10 @@
+/*
+ * File: ShoppingCartForm.cs
+ * Author: Christian J. Ramos Ortega 841-18-4582
+ * Course: COTI 4150-KJ1 Prof. Antonio F. Huertas
+ * Date: 03/22/2023
+ * Purpose: This form asks the user for       
+ */
 namespace ShoppingCartApp
 {
     public partial class ShoppingCartForm : Form
@@ -16,13 +23,20 @@ namespace ShoppingCartApp
         //Open the Print Books Form as a modal form.
         private void mnuProducts_PrintBooks_Click(object sender, EventArgs e)
         {
-            new PrintBooksForm().ShowDialog();
+            Form printBooks = new PrintBooksForm();
+            DialogResult pBooKResult = printBooks.ShowDialog();
+
+            if(pBooKResult == DialogResult.OK)
+            {
+               //lstProducts = printBooks.Tag
+            }
         }
 
         //Open the Audio Books Form as a modal form.
         private void mnuProducts_AudioBooks_Click(object sender, EventArgs e)
         {
-            new AudioBooksForm().ShowDialog();
+            Form audioBooks = new AudioBooksForm();
+            DialogResult aBookResult = audioBooks.ShowDialog();
         }
 
         //Event handler for the About button
