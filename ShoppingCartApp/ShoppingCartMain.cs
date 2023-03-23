@@ -1,3 +1,10 @@
+/*
+ * File: ShoppingCartMain.cs
+ * Author: Christian J. Ramos Ortega 841-18-4582
+ * Course: COTI 4150-KJ1 Prof. Antonio F. Huertas
+ * Date: 03/22/2023
+ * Purpose: This is the main program for the ShoppingCartApp.
+ */
 namespace ShoppingCartApp
 {
     internal static class ShoppingCartMain

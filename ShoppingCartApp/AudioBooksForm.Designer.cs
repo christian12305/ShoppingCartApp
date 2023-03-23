@@ -83,6 +83,8 @@
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnAddCart);
             this.Controls.Add(this.grpAudioBooks);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "AudioBooksForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Audio Books";

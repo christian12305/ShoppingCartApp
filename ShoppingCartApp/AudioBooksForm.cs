@@ -1,4 +1,12 @@
-﻿using System;
+﻿/*
+ * File: AudioBooksForm.cs
+ * Author: Christian J. Ramos Ortega 841-18-4582
+ * Course: COTI 4150-KJ1 Prof. Antonio F. Huertas
+ * Date: 03/22/2023
+ * Purpose: This form creates a list of available audio books
+ *          for the user to choose and add to the cart.
+ */
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;

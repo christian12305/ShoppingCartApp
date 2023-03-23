@@ -20,6 +20,7 @@ namespace ShoppingCartApp
             InitializeComponent();
         }
 
+        //Event handler for the add to cart button
         private void btnAddCart_Click(object sender, EventArgs e)
         {
             output += lstPrintBooks.SelectedItem.ToString();
@@ -39,6 +40,7 @@ namespace ShoppingCartApp
         //Event handler for the close button
         private void btnClose_Click(object sender, EventArgs e)
         {
+            this.Tag = output;
             this.Close();
         }
     }

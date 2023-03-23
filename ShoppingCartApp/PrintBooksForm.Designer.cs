@@ -1,4 +1,12 @@
-﻿namespace ShoppingCartApp
+﻿/*
+ * File: PrintBooksForm.cs
+ * Author: Christian J. Ramos Ortega 841-18-4582
+ * Course: COTI 4150-KJ1 Prof. Antonio F. Huertas
+ * Date: 03/22/2023
+ * Purpose: This form creates a list of available print books
+ *          for the user to choose and add to the cart.
+ */
+namespace ShoppingCartApp
 {
     partial class PrintBooksForm
     {
@@ -83,6 +91,8 @@
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnAddCart);
             this.Controls.Add(this.grpPrintBooks);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "PrintBooksForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Print Books";
