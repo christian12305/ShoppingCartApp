@@ -71,7 +71,7 @@
             this.mnuFile_Exit});
             this.mnuFile.Name = "mnuFile";
             this.mnuFile.Size = new System.Drawing.Size(37, 20);
-            this.mnuFile.Text = "File";
+            this.mnuFile.Text = "&File";
             // 
             // mnuFile_Reset
             // 
@@ -98,7 +98,7 @@
             this.mnuProducts_AudioBooks});
             this.mnuProducts.Name = "mnuProducts";
             this.mnuProducts.Size = new System.Drawing.Size(66, 20);
-            this.mnuProducts.Text = "Products";
+            this.mnuProducts.Text = "&Products";
             // 
             // mnuProducts_PrintBooks
             // 
@@ -120,7 +120,7 @@
             this.mnuHelp_About});
             this.mnuHelp.Name = "mnuHelp";
             this.mnuHelp.Size = new System.Drawing.Size(44, 20);
-            this.mnuHelp.Text = "Help";
+            this.mnuHelp.Text = "&Help";
             // 
             // mnuHelp_About
             // 
