@@ -36,8 +36,18 @@ namespace ShoppingCartApp
         //Stores the chosen print books to the Tag property.
         private void SaveData()
         {
-            output += $"{lstPrintBooks.SelectedItem.ToString()},\n";
+            string? selection = selection = lstPrintBooks.SelectedItem.ToString();
+
+
+            if (output == null)
+                output += $"{selection}";
+            else
+                output += $",{selection}";
+           
+
             this.Tag = output;
+
+            MessageBox.Show($"Item: {selection} has been added!", "Selected", MessageBoxButtons.OK);
         }
 
         //Adds the corresponding list to the form load event handler

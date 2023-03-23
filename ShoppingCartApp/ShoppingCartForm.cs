@@ -11,6 +11,7 @@ namespace ShoppingCartApp
 {
     public partial class ShoppingCartForm : Form
     {
+        SortedDictionary<string,decimal> cartSelection = new SortedDictionary<string,decimal>();
         public ShoppingCartForm()
         {
             InitializeComponent();
@@ -26,17 +27,44 @@ namespace ShoppingCartApp
         private void mnuProducts_PrintBooks_Click(object sender, EventArgs e)
         {
             Form printBooks = new PrintBooksForm();
+
             DialogResult printBooKResult = printBooks.ShowDialog();
 
-            if(printBooKResult == DialogResult.OK)
+            ReadTag(printBooks, printBooKResult);
+        }
+
+        //Receives the data from the printBooks form and manipulates for the correct format
+        private void ReadTag(Form printBooks, DialogResult printBooKResult)
+        {
+            if (printBooKResult == DialogResult.OK)
             {
-                String[] splitArray = printBooks.Tag.ToString().Split(",");
-                foreach( String s in splitArray)
+                string? tagString = printBooks.Tag.ToString();
+
+                String[] tagSplit = tagString.Split(",");
+
+                //Adding each selected item to our products list and our dictionary
+                foreach (String str in tagSplit)
                 {
-                    lstProducts.Items.Add(s);
+                    lstProducts.Items.Add(str);
+
+                    FormatProduct(str, out string name, out decimal price);
+
+                    cartSelection.Add(name, price);
                 }
-                             
+
             }
+        }
+
+        //Formats the products key and values to add
+        private static void FormatProduct(string str, out string name, out decimal price)
+        {
+            string[] bookSplit = str.Split("-");
+
+            name = bookSplit[0].ToString();
+
+            string temp = bookSplit[1].Replace("$", "").Trim();
+
+            price = decimal.Parse(temp);
         }
 
         //Open the Audio Books Form as a modal form.
