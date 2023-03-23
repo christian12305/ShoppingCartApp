@@ -33,10 +33,10 @@ namespace ShoppingCartApp
             SaveData();
         }
 
-        //Stores the chosen print books
+        //Stores the chosen print books to the Tag property.
         private void SaveData()
         {
-            output += $"\n {lstPrintBooks.SelectedItem.ToString()}";
+            output += $"{lstPrintBooks.SelectedItem.ToString()},\n";
             this.Tag = output;
         }
 

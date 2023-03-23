@@ -19,19 +19,23 @@ namespace ShoppingCartApp
         //Button event handler for removing an item.
         private void btnRemove_Click(object sender, EventArgs e)
         {
-            lstProducts.ClearSelected();
+            lstProducts.Items.Remove(lstProducts.SelectedItem);
         }
 
         //Open the Print Books Form as a modal form.
         private void mnuProducts_PrintBooks_Click(object sender, EventArgs e)
         {
             Form printBooks = new PrintBooksForm();
-            DialogResult pBooKResult = printBooks.ShowDialog();
+            DialogResult printBooKResult = printBooks.ShowDialog();
 
-            if(pBooKResult == DialogResult.OK)
+            if(printBooKResult == DialogResult.OK)
             {
-                MessageBox.Show(printBooks.Tag.ToString());
-                
+                String[] splitArray = printBooks.Tag.ToString().Split(",");
+                foreach( String s in splitArray)
+                {
+                    lstProducts.Items.Add(s);
+                }
+                             
             }
         }
 
