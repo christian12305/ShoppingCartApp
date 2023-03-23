@@ -20,7 +20,17 @@ namespace ShoppingCartApp
         //Button event handler for removing an item.
         private void btnRemove_Click(object sender, EventArgs e)
         {
-            lstProducts.Items.Remove(lstProducts.SelectedItem);
+            string? item = lstProducts.SelectedItem.ToString();
+
+            FormatProduct(item, out string name, out decimal price);
+
+            lstProducts.Items.Remove(item);
+
+            cartSelection.Remove(name);
+
+            MessageBox.Show($"Item: {name} has been removed from the cart!", "Removed from Cart", MessageBoxButtons.OK);
+
+            UpdateTotals();
         }
 
         //Open the Print Books Form as a modal form.
@@ -50,9 +60,51 @@ namespace ShoppingCartApp
                     FormatProduct(str, out string name, out decimal price);
 
                     cartSelection.Add(name, price);
+
+                    UpdateTotals();
                 }
 
             }
+        }
+
+        //Updates the totals for each textbox.
+        private void UpdateTotals()
+        {
+            SubtotalCalc(out decimal subtotal);
+
+            txtSubtotal.Text = subtotal.ToString("c");
+
+            TaxCalc(subtotal, out decimal tax);
+
+            txtTax.Text = tax.ToString("c");
+
+            ShippingCalc(out decimal shipping);
+
+            txtShipping.Text = shipping.ToString("c");
+
+            TotalCalc(subtotal, tax, shipping, out decimal total);
+
+            txtTotal.Text = total.ToString("c");
+
+        }
+
+        //Calculates the total amount for the items in the cart.
+        private void TotalCalc(decimal subtotal, decimal tax, decimal shipping, out decimal total) => total = subtotal + tax + shipping;
+
+        //Calculates shipping for all the items selected.
+        private void ShippingCalc(out decimal shipping) => shipping = cartSelection.Count * 2.0m;
+        
+
+        //Calculates the 11.5% tax with the calculated subtotal
+        private void TaxCalc(decimal subtotal, out decimal tax) => tax = subtotal * 0.115m;
+
+        //Calculate Subtotal
+        private void SubtotalCalc(out decimal subtotal)
+        {
+            subtotal = 0m;
+
+            foreach (var item in cartSelection)
+                subtotal += item.Value;
         }
 
         //Formats the products key and values to add
