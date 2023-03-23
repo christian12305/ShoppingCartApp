@@ -30,7 +30,8 @@ namespace ShoppingCartApp
 
             if(pBooKResult == DialogResult.OK)
             {
-                lstProducts.Items.Add(printBooks.Tag);
+                MessageBox.Show(printBooks.Tag.ToString());
+                
             }
         }
 

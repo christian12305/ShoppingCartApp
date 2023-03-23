@@ -1,12 +1,4 @@
-﻿/*
- * File: PrintBooksForm.cs
- * Author: Christian J. Ramos Ortega 841-18-4582
- * Course: COTI 4150-KJ1 Prof. Antonio F. Huertas
- * Date: 03/22/2023
- * Purpose: This form creates a list of available print books
- *          for the user to choose and add to the cart.
- */
-namespace ShoppingCartApp
+﻿namespace ShoppingCartApp
 {
     partial class PrintBooksForm
     {

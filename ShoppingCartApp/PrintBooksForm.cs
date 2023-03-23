@@ -1,4 +1,12 @@
-﻿using System;
+﻿/*
+ * File: PrintBooksForm.cs
+ * Author: Christian J. Ramos Ortega 841-18-4582
+ * Course: COTI 4150-KJ1 Prof. Antonio F. Huertas
+ * Date: 03/22/2023
+ * Purpose: This form creates a list of available print books
+ *          for the user to choose and add to the cart.
+ */
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,8 +20,7 @@ namespace ShoppingCartApp
 {
     public partial class PrintBooksForm : Form
     {
-
-        string? output = string.Empty;
+        string? output = null;
 
         public PrintBooksForm()
         {
@@ -23,8 +30,14 @@ namespace ShoppingCartApp
         //Event handler for the add to cart button
         private void btnAddCart_Click(object sender, EventArgs e)
         {
-            output += lstPrintBooks.SelectedItem.ToString();
+            SaveData();
+        }
 
+        //Stores the chosen print books
+        private void SaveData()
+        {
+            output += $"\n {lstPrintBooks.SelectedItem.ToString()}";
+            this.Tag = output;
         }
 
         //Adds the corresponding list to the form load event handler
@@ -34,13 +47,12 @@ namespace ShoppingCartApp
             lstPrintBooks.Items.Add("Feel the Stress - $18.50");
             lstPrintBooks.Items.Add("Learn Calculus in One Day - $29.95");
             lstPrintBooks.Items.Add("The History of Computers - $14.50");
-
         }
 
         //Event handler for the close button
         private void btnClose_Click(object sender, EventArgs e)
         {
-            this.Tag = output;
+            this.DialogResult = DialogResult.OK;
             this.Close();
         }
     }
