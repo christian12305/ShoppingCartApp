@@ -3,7 +3,9 @@
  * Author: Christian J. Ramos Ortega 841-18-4582
  * Course: COTI 4150-KJ1 Prof. Antonio F. Huertas
  * Date: 03/22/2023
- * Purpose: This form asks the user for       
+ * Purpose: This form creates a shopping cart for the user.
+ *          The user may select books from print books and audio books
+ *          to add to their shopping cart and calculate total.
  */
 namespace ShoppingCartApp
 {
@@ -28,7 +30,7 @@ namespace ShoppingCartApp
 
             if(pBooKResult == DialogResult.OK)
             {
-               //lstProducts = printBooks.Tag
+                lstProducts.Items.Add(printBooks.Tag);
             }
         }
 
