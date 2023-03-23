@@ -53,7 +53,6 @@
             this.lstAudioBooks.Name = "lstAudioBooks";
             this.lstAudioBooks.Size = new System.Drawing.Size(292, 109);
             this.lstAudioBooks.TabIndex = 0;
-            this.lstAudioBooks.SelectedIndexChanged += new System.EventHandler(this.lstAudioBooks_SelectedIndexChanged);
             // 
             // btnAddCart
             // 
@@ -88,6 +87,7 @@
             this.Name = "AudioBooksForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Audio Books";
+            this.Load += new System.EventHandler(this.AudioBooksForm_Load);
             this.grpAudioBooks.ResumeLayout(false);
             this.ResumeLayout(false);
 

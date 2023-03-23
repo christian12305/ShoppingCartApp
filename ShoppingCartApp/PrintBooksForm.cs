@@ -20,7 +20,7 @@ namespace ShoppingCartApp
 {
     public partial class PrintBooksForm : Form
     {
-        string? output = null;
+        private string? output = null;
 
         public PrintBooksForm()
         {
@@ -38,13 +38,11 @@ namespace ShoppingCartApp
         {
             string? selection = selection = lstPrintBooks.SelectedItem.ToString();
 
-
             if (output == null)
                 output += $"{selection}";
             else
                 output += $",{selection}";
            
-
             this.Tag = output;
 
             MessageBox.Show($"Item: {selection} has been added to the cart!", "Added to Cart", MessageBoxButtons.OK);

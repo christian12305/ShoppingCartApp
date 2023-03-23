@@ -20,29 +20,49 @@ namespace ShoppingCartApp
 {
     public partial class AudioBooksForm : Form
     {
+        private string? output = null;
+
         public AudioBooksForm()
         {
             InitializeComponent();
         }
 
-        //Adds the corresponding list to the form load event handler
-        private void lstAudioBooks_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            lstAudioBooks.Items.Add(@"Developing People Skills - $12.95");
-            lstAudioBooks.Items.Add(@"Indiscrete Math - $19.95");
-            lstAudioBooks.Items.Add(@"Relaxation Techniques - $11.50");
-            lstAudioBooks.Items.Add(@"You can Program Too! - $25.50");
-        }
-
         private void btnAddCart_Click(object sender, EventArgs e)
         {
+            SaveData();
+        }
 
-        }  
-        
+        //Stores the chosen audio books to the Tag property.
+        private void SaveData()
+        {
+            string? selection = selection = lstAudioBooks.SelectedItem.ToString();
+
+
+            if (output == null)
+                output += $"{selection}";
+            else
+                output += $",{selection}";
+
+
+            this.Tag = output;
+
+            MessageBox.Show($"Item: {selection} has been added to the cart!", "Added to Cart", MessageBoxButtons.OK);
+        }
+
         //Event handler for the close button
         private void btnClose_Click(object sender, EventArgs e)
         {
+            this.DialogResult = DialogResult.OK;
             this.Close();
+        }
+
+        //Adds the corresponding list to the form load event handler
+        private void AudioBooksForm_Load(object sender, EventArgs e)
+        {
+            lstAudioBooks.Items.Add("Developing People Skills - $12.95");
+            lstAudioBooks.Items.Add("Indiscrete Math - $19.95");
+            lstAudioBooks.Items.Add("Relaxation Techniques - $11.50");
+            lstAudioBooks.Items.Add("You can Program Too! - $25.50");
         }
     }
 }

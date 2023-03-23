@@ -123,7 +123,10 @@ namespace ShoppingCartApp
         private void mnuProducts_AudioBooks_Click(object sender, EventArgs e)
         {
             Form audioBooks = new AudioBooksForm();
-            DialogResult aBookResult = audioBooks.ShowDialog();
+
+            DialogResult audioBookResult = audioBooks.ShowDialog();
+
+            ReadTag(audioBooks, audioBookResult);
         }
 
         //Event handler for the About button
