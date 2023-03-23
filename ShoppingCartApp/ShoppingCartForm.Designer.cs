@@ -76,15 +76,19 @@
             // mnuFile_Reset
             // 
             this.mnuFile_Reset.Name = "mnuFile_Reset";
+            this.mnuFile_Reset.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.R)));
             this.mnuFile_Reset.Size = new System.Drawing.Size(180, 22);
             this.mnuFile_Reset.Text = "R&eset";
+            this.mnuFile_Reset.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.mnuFile_Reset.Click += new System.EventHandler(this.mnuFile_Reset_Click);
             // 
             // mnuFile_Exit
             // 
             this.mnuFile_Exit.Name = "mnuFile_Exit";
+            this.mnuFile_Exit.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
             this.mnuFile_Exit.Size = new System.Drawing.Size(180, 22);
             this.mnuFile_Exit.Text = "E&xit";
+            this.mnuFile_Exit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.mnuFile_Exit.Click += new System.EventHandler(this.mnuFile_Exit_Click);
             // 
             // mnuProducts
@@ -99,14 +103,14 @@
             // mnuProducts_PrintBooks
             // 
             this.mnuProducts_PrintBooks.Name = "mnuProducts_PrintBooks";
-            this.mnuProducts_PrintBooks.Size = new System.Drawing.Size(141, 22);
+            this.mnuProducts_PrintBooks.Size = new System.Drawing.Size(180, 22);
             this.mnuProducts_PrintBooks.Text = "P&rint Books";
             this.mnuProducts_PrintBooks.Click += new System.EventHandler(this.mnuProducts_PrintBooks_Click);
             // 
             // mnuProducts_AudioBooks
             // 
             this.mnuProducts_AudioBooks.Name = "mnuProducts_AudioBooks";
-            this.mnuProducts_AudioBooks.Size = new System.Drawing.Size(141, 22);
+            this.mnuProducts_AudioBooks.Size = new System.Drawing.Size(180, 22);
             this.mnuProducts_AudioBooks.Text = "A&udio Books";
             this.mnuProducts_AudioBooks.Click += new System.EventHandler(this.mnuProducts_AudioBooks_Click);
             // 
@@ -121,7 +125,7 @@
             // mnuHelp_About
             // 
             this.mnuHelp_About.Name = "mnuHelp_About";
-            this.mnuHelp_About.Size = new System.Drawing.Size(107, 22);
+            this.mnuHelp_About.Size = new System.Drawing.Size(180, 22);
             this.mnuHelp_About.Text = "&About";
             this.mnuHelp_About.Click += new System.EventHandler(this.mnuHelp_About_Click);
             // 
