@@ -58,15 +58,19 @@ namespace ShoppingCartApp
                 String[] tagSplit = tagString.Split(",");
 
                 //Adding each selected item to our products list and our dictionary
+                // if it has not been added before.
                 foreach (String str in tagSplit)
                 {
-                    lstProducts.Items.Add(str);
+                    if (!lstProducts.Items.Contains(str))
+                    {
+                        lstProducts.Items.Add(str);
 
-                    FormatProduct(str, out string name, out decimal price);
+                        FormatProduct(str, out string name, out decimal price);
 
-                    cartSelection.Add(name, price);
+                        cartSelection.Add(name, price);
 
-                    UpdateTotals();
+                        UpdateTotals();
+                    }  
                 }
 
             }

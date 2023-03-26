@@ -37,16 +37,15 @@ namespace ShoppingCartApp
         {
             string? selection = selection = lstAudioBooks.SelectedItem.ToString();
 
-
             if (output == null)
                 output += $"{selection}";
             else
                 output += $",{selection}";
 
-
             this.Tag = output;
 
-            MessageBox.Show($"Item: {selection} has been added to the cart!", "Added to Cart", MessageBoxButtons.OK);
+            //Commented because this was not requested on the homework, but ideal for the user.
+            //MessageBox.Show($"Item: {selection} has been added to the cart!", "Added to Cart", MessageBoxButtons.OK);
         }
 
         //Event handler for the close button

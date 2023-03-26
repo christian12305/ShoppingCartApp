@@ -45,7 +45,8 @@ namespace ShoppingCartApp
            
             this.Tag = output;
 
-            MessageBox.Show($"Item: {selection} has been added to the cart!", "Added to Cart", MessageBoxButtons.OK);
+            //Commented because this was not requested on the homework, but ideal for the user.
+            //MessageBox.Show($"Item: {selection} has been added to the cart!", "Added to Cart", MessageBoxButtons.OK);
         }
 
         //Adds the corresponding list to the form load event handler
