@@ -20,17 +20,22 @@ namespace ShoppingCartApp
         //Button event handler for removing an item.
         private void btnRemove_Click(object sender, EventArgs e)
         {
-            string? item = lstProducts.SelectedItem.ToString();
 
-            FormatProduct(item, out string name, out decimal price);
+            if(lstProducts.Items.Count != 0) 
+            {
+                string? item = lstProducts.SelectedItem.ToString();
 
-            lstProducts.Items.Remove(item);
+                FormatProduct(item, out string name, out decimal price);
 
-            cartSelection.Remove(name);
+                lstProducts.Items.Remove(item);
 
-            MessageBox.Show($"Item: {name} has been removed from the cart!", "Removed from Cart", MessageBoxButtons.OK);
+                cartSelection.Remove(name);
 
-            UpdateTotals();
+                MessageBox.Show($"Item: {name} has been removed from the cart!", "Removed from Cart", MessageBoxButtons.OK);
+
+                UpdateTotals();
+            }
+
         }
 
         //Open the Print Books Form as a modal form.
