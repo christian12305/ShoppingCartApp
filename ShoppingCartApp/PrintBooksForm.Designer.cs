@@ -55,7 +55,7 @@
             this.lstPrintBooks.Name = "lstPrintBooks";
             this.lstPrintBooks.Size = new System.Drawing.Size(292, 109);
             this.lstPrintBooks.TabIndex = 0;
-            this.tipPrintBooks.SetToolTip(this.lstPrintBooks, "Print books list");
+            this.tipPrintBooks.SetToolTip(this.lstPrintBooks, "Print books list.");
             // 
             // btnAddCart
             // 

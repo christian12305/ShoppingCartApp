@@ -149,6 +149,7 @@
             this.lstProducts.Name = "lstProducts";
             this.lstProducts.Size = new System.Drawing.Size(233, 124);
             this.lstProducts.TabIndex = 0;
+            this.tipShoppingCart.SetToolTip(this.lstProducts, "Selected products list");
             // 
             // lblSubtotal
             // 
