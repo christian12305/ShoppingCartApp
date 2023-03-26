@@ -28,10 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.grpAudioBooks = new System.Windows.Forms.GroupBox();
             this.lstAudioBooks = new System.Windows.Forms.ListBox();
             this.btnAddCart = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
+            this.tipAudioBooks = new System.Windows.Forms.ToolTip(this.components);
             this.grpAudioBooks.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -53,6 +55,7 @@
             this.lstAudioBooks.Name = "lstAudioBooks";
             this.lstAudioBooks.Size = new System.Drawing.Size(292, 109);
             this.lstAudioBooks.TabIndex = 0;
+            this.tipAudioBooks.SetToolTip(this.lstAudioBooks, "Audio books list.");
             // 
             // btnAddCart
             // 
@@ -99,5 +102,6 @@
         private ListBox lstAudioBooks;
         private Button btnAddCart;
         private Button btnClose;
+        private ToolTip tipAudioBooks;
     }
 }

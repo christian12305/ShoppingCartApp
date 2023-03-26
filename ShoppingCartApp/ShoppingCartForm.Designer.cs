@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.mnuFile = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuFile_Reset = new System.Windows.Forms.ToolStripMenuItem();
@@ -48,6 +49,7 @@
             this.lblTotal = new System.Windows.Forms.Label();
             this.txtTotal = new System.Windows.Forms.TextBox();
             this.btnRemove = new System.Windows.Forms.Button();
+            this.tipShoppingCart = new System.Windows.Forms.ToolTip(this.components);
             this.menuStrip1.SuspendLayout();
             this.grpProductSelected.SuspendLayout();
             this.SuspendLayout();
@@ -77,7 +79,7 @@
             // 
             this.mnuFile_Reset.Name = "mnuFile_Reset";
             this.mnuFile_Reset.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.R)));
-            this.mnuFile_Reset.Size = new System.Drawing.Size(180, 22);
+            this.mnuFile_Reset.Size = new System.Drawing.Size(143, 22);
             this.mnuFile_Reset.Text = "R&eset";
             this.mnuFile_Reset.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.mnuFile_Reset.Click += new System.EventHandler(this.mnuFile_Reset_Click);
@@ -86,7 +88,7 @@
             // 
             this.mnuFile_Exit.Name = "mnuFile_Exit";
             this.mnuFile_Exit.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
-            this.mnuFile_Exit.Size = new System.Drawing.Size(180, 22);
+            this.mnuFile_Exit.Size = new System.Drawing.Size(143, 22);
             this.mnuFile_Exit.Text = "E&xit";
             this.mnuFile_Exit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.mnuFile_Exit.Click += new System.EventHandler(this.mnuFile_Exit_Click);
@@ -103,14 +105,14 @@
             // mnuProducts_PrintBooks
             // 
             this.mnuProducts_PrintBooks.Name = "mnuProducts_PrintBooks";
-            this.mnuProducts_PrintBooks.Size = new System.Drawing.Size(180, 22);
+            this.mnuProducts_PrintBooks.Size = new System.Drawing.Size(141, 22);
             this.mnuProducts_PrintBooks.Text = "P&rint Books";
             this.mnuProducts_PrintBooks.Click += new System.EventHandler(this.mnuProducts_PrintBooks_Click);
             // 
             // mnuProducts_AudioBooks
             // 
             this.mnuProducts_AudioBooks.Name = "mnuProducts_AudioBooks";
-            this.mnuProducts_AudioBooks.Size = new System.Drawing.Size(180, 22);
+            this.mnuProducts_AudioBooks.Size = new System.Drawing.Size(141, 22);
             this.mnuProducts_AudioBooks.Text = "A&udio Books";
             this.mnuProducts_AudioBooks.Click += new System.EventHandler(this.mnuProducts_AudioBooks_Click);
             // 
@@ -125,7 +127,7 @@
             // mnuHelp_About
             // 
             this.mnuHelp_About.Name = "mnuHelp_About";
-            this.mnuHelp_About.Size = new System.Drawing.Size(180, 22);
+            this.mnuHelp_About.Size = new System.Drawing.Size(107, 22);
             this.mnuHelp_About.Text = "&About";
             this.mnuHelp_About.Click += new System.EventHandler(this.mnuHelp_About_Click);
             // 
@@ -166,6 +168,7 @@
             this.txtSubtotal.Size = new System.Drawing.Size(100, 23);
             this.txtSubtotal.TabIndex = 3;
             this.txtSubtotal.TabStop = false;
+            this.tipShoppingCart.SetToolTip(this.txtSubtotal, "Subtotal");
             // 
             // lblTax
             // 
@@ -185,6 +188,7 @@
             this.txtTax.Size = new System.Drawing.Size(100, 23);
             this.txtTax.TabIndex = 5;
             this.txtTax.TabStop = false;
+            this.tipShoppingCart.SetToolTip(this.txtTax, "Tax");
             // 
             // lblShipping
             // 
@@ -204,6 +208,7 @@
             this.txtShipping.Size = new System.Drawing.Size(100, 23);
             this.txtShipping.TabIndex = 7;
             this.txtShipping.TabStop = false;
+            this.tipShoppingCart.SetToolTip(this.txtShipping, "Shipping cost");
             // 
             // lblTotal
             // 
@@ -223,6 +228,7 @@
             this.txtTotal.Size = new System.Drawing.Size(100, 23);
             this.txtTotal.TabIndex = 9;
             this.txtTotal.TabStop = false;
+            this.tipShoppingCart.SetToolTip(this.txtTotal, "Total");
             // 
             // btnRemove
             // 
@@ -284,5 +290,6 @@
         private Label lblTotal;
         private TextBox txtTotal;
         private Button btnRemove;
+        private ToolTip tipShoppingCart;
     }
 }

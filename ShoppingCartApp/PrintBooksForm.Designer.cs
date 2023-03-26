@@ -28,10 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.grpPrintBooks = new System.Windows.Forms.GroupBox();
             this.lstPrintBooks = new System.Windows.Forms.ListBox();
             this.btnAddCart = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
+            this.tipPrintBooks = new System.Windows.Forms.ToolTip(this.components);
             this.grpPrintBooks.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -53,6 +55,7 @@
             this.lstPrintBooks.Name = "lstPrintBooks";
             this.lstPrintBooks.Size = new System.Drawing.Size(292, 109);
             this.lstPrintBooks.TabIndex = 0;
+            this.tipPrintBooks.SetToolTip(this.lstPrintBooks, "Print books list");
             // 
             // btnAddCart
             // 
@@ -100,7 +103,6 @@
         private ListBox lstPrintBooks;
         private Button btnAddCart;
         private Button btnClose;
-
-
+        private ToolTip tipPrintBooks;
     }
 }
